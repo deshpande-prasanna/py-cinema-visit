@@ -14,20 +14,9 @@ def cinema_visit(customers: list, hall_number: int,
                              food=customer.get("food"))
                     for customer in customers]
 
-    #sell products
+    # sell products
     for my_customer in my_customers:
         CinemaBar.sell_product(my_customer, my_customer.food)
 
-    #start movie session
+    # start movie session
     my_cinema_hall.movie_session(movie, my_customers, my_cleaner)
-
-customers = [{'name': 'Bob', 'food': 'Coca-cola'},
-             {"name": "Michael", "food": "Samosa"},
-             {"name": "Monica", "food": "Pav-Bhaji"}
-             ]
-
-hall_number = 5
-cleaner = 'Anna'
-movie = 'Madagascar'
-
-cinema_visit(customers, hall_number, cleaner, movie)
