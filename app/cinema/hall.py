@@ -15,8 +15,7 @@ class CinemaHall:
         for customer in customers:
             if isinstance(customer, dict):
                 (Customer(name=customer.get("name"),
-                         food=customer.get("food"))
-                 .watch_movie(movie_name))
+                          food=customer.get("food")).watch_movie(movie_name))
             else:
                 (Customer(name=customer.name, food=customer.food)
                  .watch_movie(movie_name))
