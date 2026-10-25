@@ -13,12 +13,7 @@ class CinemaHall:
         print(f'"{movie_name}" started in hall number {self.number}.')
 
         for customer in customers:
-            if isinstance(customer, dict):
-                (Customer(name=customer.get("name"),
-                          food=customer.get("food")).watch_movie(movie_name))
-            else:
-                (Customer(name=customer.name, food=customer.food)
-                 .watch_movie(movie_name))
+            customer.watch_movie(movie_name)
 
         print(f'"{movie_name}" ended.')
         cleaning_staff.clean_hall(self.number)
